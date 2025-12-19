@@ -8,5 +8,5 @@ for i in range(0,numerostudenti):
     eta = int(input("dammi età studente: "))
     studenti.append(studente)
     etastudenti.append(eta)
-anni15 = sum(1 for n in etastudenti if n > 15)
-print(f"gli studenti di eta pari a 15 sono: {anni15}")
+anni15 = sum(1 for n in etastudenti if n >= 15)
+print(f"gli studenti di eta pari a 15 o > sono: {anni15}")
