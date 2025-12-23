@@ -1,39 +1,24 @@
-//elenco membri di una classe e la loro età
+type metadati1A = [string, number];
 
-let studente1: string = "Marco";
-let eta1: number = 16;
-let studente2: string = "Roberto";
-let eta2: number = 17;
-let studente3: string = "Luca";
-let eta3: number = 18;
-console.log(studente1,"ha",eta1);
-console.log(studente2,"ha",eta2);
-console.log(studente3,"ha",eta3);
-let somma: number = eta1 + eta2;
-console.log(somma);
+let studenteA: string = "Roberto";
+let etaA: number = 18;
+let studenteB: string = "Marco";
+let etaB: number = 16;
+let studenteC: string = "Luca";
+let etaC: number = 17;
+let studenteD: string = "Gianni";
+let etaD: number = 15;
+let mediaeta: number = 0;
 
-let classe: [string, number][];
-classe=[];
+let classe1A: metadati1A[] = [];
 
-classe.push([studente1, eta1]);
-classe.push([studente2, eta2]);
+classe1A.push([studenteA, etaA], [studenteB, etaB], [studenteC, etaC], [studenteD, etaD]);
 
-console.log(classe[0][0],"ha",classe[0][1],"anni");
-console.log(classe[1][0],"ha",classe[1][1],"anni");
+for (let i = 0 ; i< classe1A.length ; i++){
+    mediaeta= mediaeta + classe1A[i][1]
+}
 
-type Classe4AS = [string, number];
+  mediaeta /= classe1A.length;
 
-let studenteA: Classe4AS = ["Andrea",18];
-let studenteB: Classe4AS = ["Ronaldo",17];
+console.log(`la classe 1A ha ${classe1A.length} con una media di eta pari à ${mediaeta}`); 
 
-console.log("lo studente",studenteA[0],"ha",studenteA[1]);
-
-
-type funzione = [string, number];
-
-type somma = funzione[];
-
-const eseguibile: somma = [
-    ["+",6]
-]
-console.log(eseguibile[0][0])
