@@ -21,4 +21,5 @@ for (let i = 0 ; i< classe1A.length ; i++){
   mediaeta /= classe1A.length;
 
 console.log(`la classe 1A ha ${classe1A.length} con una media di eta pari à ${mediaeta}`); 
+console.log(`il primo studente della classe 1A: ${classe1A[0][0]} `); 
 
